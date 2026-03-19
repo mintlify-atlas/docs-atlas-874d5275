@@ -1,0 +1,142 @@
+{
+  "projectType": "framework",
+  "projectName": "Basilisk",
+  "projectDescription": "Basilisk is an open-source, modular astrodynamics simulation framework for spacecraft mission modeling, guidance, navigation, and control — written in C/C++ with a Python scripting interface.",
+  "theme": "aspen",
+  "primaryColor": "#1B4F8A",
+  "lightColor": "#4A90D9",
+  "darkColor": "#0D2B4E",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "install/quickstart",
+              "install/build-from-source",
+              "install/containers",
+              "install/support-data"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/message-passing",
+              "concepts/simulation-structure",
+              "concepts/module-system",
+              "concepts/task-rates"
+            ]
+          },
+          {
+            "group": "Simulation Modules",
+            "pages": [
+              "modules/overview",
+              "modules/dynamics",
+              "modules/environment",
+              "modules/sensors",
+              "modules/fsw-algorithms",
+              "modules/power-thermal",
+              "modules/communication"
+            ]
+          },
+          {
+            "group": "FSW Algorithms",
+            "pages": [
+              "fsw/attitude-control",
+              "fsw/attitude-determination",
+              "fsw/attitude-guidance",
+              "fsw/orbit-control",
+              "fsw/optical-navigation",
+              "fsw/small-body-navigation"
+            ]
+          },
+          {
+            "group": "Tutorials & Examples",
+            "pages": [
+              "examples/basic-orbit",
+              "examples/attitude-feedback",
+              "examples/attitude-guidance",
+              "examples/monte-carlo",
+              "examples/hardware-in-the-loop",
+              "examples/formation-flying"
+            ]
+          },
+          {
+            "group": "Developer Guide",
+            "pages": [
+              "developer/creating-c-modules",
+              "developer/creating-cpp-modules",
+              "developer/creating-python-modules",
+              "developer/module-checkout",
+              "developer/coding-guidelines",
+              "developer/adding-documentation",
+              "developer/external-modules"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "support/faq",
+              "support/release-notes",
+              "support/known-issues",
+              "support/migration-guide",
+              "support/contributing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Vizard",
+        "groups": [
+          {
+            "group": "Vizard Visualization",
+            "pages": [
+              "vizard/overview",
+              "vizard/download",
+              "vizard/gui-guide",
+              "vizard/advanced",
+              "vizard/gallery",
+              "vizard/release-notes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Faster-than-realtime spacecraft 6-DOF dynamics simulation",
+    "Modular architecture with message-passing interface (MPI) between simulation and FSW modules",
+    "Python scripting interface over high-performance C/C++ core via SWIG",
+    "Repeatable Monte-Carlo simulation engine with configurable distribution functions",
+    "Hardware-in-the-loop (HIL) support with real-time synchronization",
+    "Comprehensive FSW algorithm library: attitude control, GNC, orbit control, optical navigation",
+    "Rich environment modeling: gravity, atmosphere, magnetic field, eclipse, space weather",
+    "3D visualization companion app (Vizard) powered by Unity",
+    "MuJoCo dynamics integration for advanced rigid body simulation",
+    "Cross-platform: macOS, Linux, Windows; available via pip (bsk) and Docker"
+  ],
+  "publicApiSurface": [
+    "SimulationBaseClass.SimBaseClass — base class for all BSK simulations",
+    "SimulationBaseClass.Simulink_SimBase — realtime simulation base class",
+    "messaging — message passing interface for module interconnection",
+    "spacecraft — rigid body spacecraft dynamics module",
+    "fswAlgorithms.attControl.mrpFeedback — MRP-based attitude feedback controller",
+    "fswAlgorithms.attGuidance — attitude guidance modules",
+    "fswAlgorithms.attDetermination — attitude determination algorithms",
+    "fswAlgorithms.opticalNavigation — optical navigation filter modules",
+    "simulation.dynamics — dynamics effectors (thrusters, RWs, hinged panels, etc.)",
+    "simulation.environment — environment models (gravity, atmosphere, magnetic field)",
+    "simulation.sensors — sensor models (CSS, IMU, star tracker, etc.)",
+    "utilities.orbitalMotion — astrodynamics utility functions",
+    "utilities.macros — unit conversion and simulation constants",
+    "utilities.SimulationBaseClass — simulation setup utilities",
+    "utilities.vizSupport — Vizard visualization integration",
+    "utilities.MonteCarlo — Monte-Carlo simulation controller",
+    "bskExamples (CLI) — downloads example scripts to local directory",
+    "bskLargeData (CLI) — downloads large BSK support data files"
+  ]
+}
